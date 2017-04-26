@@ -10,27 +10,29 @@ namespace Shop.Model.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
 
-        [StringLength(500)]
+        [MaxLength(50)]
         public string Name { set; get; }
 
-        [StringLength(500)]
+        [MaxLength(50)]
         public string Department { set; get; }
 
-        [StringLength(250)]
+        [MaxLength(50)]
         public string Skype { set; get; }
 
-        [StringLength(250)]
+        [MaxLength(50)]
         public string Facebook { set; get; }
 
-        [StringLength(250)]
+        [MaxLength(50)]
         public string Gmail { set; get; }
 
-        [StringLength(250)]
+        [MaxLength(50)]
         public string Email { set; get; }
 
-        [StringLength(250)]
+        [MaxLength(50)]
         public string Mobile { set; get; }
 
-        public bool? Status { set; get; }
+        public bool Status { set; get; }
+
+        public int? DisplayOrder { set; get; }
     }
 }

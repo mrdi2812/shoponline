@@ -10,10 +10,11 @@ namespace Shop.Model.Models
         [Key]
         public Guid ID { set; get; }
 
+        [Required]
         public DateTime VisitedDate { set; get; }
 
         [Required]
-        [StringLength(50)]
+        [MaxLength(50)]
         public string IPAddress { set; get; }
     }
 }

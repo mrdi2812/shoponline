@@ -17,19 +17,21 @@ namespace Shop.Model.Models
         public int ID { set; get; }
 
         [Required]
-        [StringLength(250)]
+        [MaxLength(256)]
         public string Name { set; get; }
 
         [Required]
-        [StringLength(250)]
+        [MaxLength(256)]
+        [Column(TypeName ="varchar")]
         public string Alias { set; get; }
 
-        [StringLength(500)]
+        [MaxLength(256)]
         public string Image { set; get; }
 
+        [Required]
         public int CategoryID { set; get; }
 
-        [StringLength(500)]
+        [MaxLength(500)]
         public string Description { set; get; }
 
         public string Content { set; get; }

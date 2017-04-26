@@ -16,19 +16,19 @@ namespace Shop.Model.Models
         public int ID { set; get; }
 
         [Required]
-        [StringLength(250)]
+        [MaxLength(256)]
         public string Name { set; get; }
 
         [Required]
-        [StringLength(250)]
+        [MaxLength(256)]
         public string Alias { set; get; }
 
         public int? ParentID { set; get;}
 
-        [StringLength(500)]
+        [MaxLength(500)]
         public string Description { set; get; }
 
-        [StringLength(500)]
+        [MaxLength(500)]
         public string Image { set; get; }
 
         public int? DisPlayOrder { set; get; }

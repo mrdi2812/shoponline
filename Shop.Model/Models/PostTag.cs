@@ -8,19 +8,18 @@ using System.Threading.Tasks;
 
 namespace Shop.Model.Models
 {
-    [Table("ProductTags")]
-    public class ProductTag
+    [Table("PostTags")]
+    public class PostTag
     {
         [Key]
-        public int ProductID { get; set; }
-
+        public int PostID { set; get; }
         [Key]
         [MaxLength(50)]
         [Column(TypeName ="varchar")]
-        public string TagID { get; set; }
+        public string TagID { set; get; }
 
-        [ForeignKey("ProductID")]
-        public virtual Product Product { set; get; }
+        [ForeignKey("PostID")]
+        public virtual Post Post { set; get; }
 
         [ForeignKey("TagID")]
         public virtual Tag Tag { set; get; }

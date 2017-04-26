@@ -13,27 +13,28 @@ namespace Shop.Model.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set;}
         [Required]
-        [StringLength(250)]
+        [MaxLength(256)]
         public string Name { set; get; }
         
         [Required]
-        [StringLength(250)]
+        [MaxLength(256)]
         public string Alias { set; get; }
 
+        [Required]
         public int CategoryID { set; get; }
 
-        [StringLength(500)]
+        [MaxLength(500)]
         public string Image { set; get; }
 
         public XElement MoreImages { set; get; }
 
         public decimal Price { set; get; }
 
-        public decimal PromotionPrice { set; get; }
+        public decimal? PromotionPrice { set; get; }
 
         public int? Warranty { set; get; }
 
-        [StringLength(500)]
+        [MaxLength(500)]
         public string Description { set; get; }
         
         public string Content { set; get; }

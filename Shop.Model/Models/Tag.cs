@@ -8,14 +8,19 @@ namespace Shop.Model.Models
     public class Tag
     {
         [Key]
+        [MaxLength(50)]
         public string TagID { set; get; }
 
-        [StringLength(50)]
+        [Required]
+        [MaxLength(50)]
         public string Name { set; get; }
 
-        [StringLength(50)]
+        [Required]
+        [MaxLength(50)]
         public string Type { set; get; }
 
         public virtual IEnumerable<ProductTag> ProductTags { get; set; }
+
+        public virtual IEnumerable<PostTag> PostTags { get; set; }
     }
 }

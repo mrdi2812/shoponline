@@ -6,15 +6,15 @@ namespace Shop.Model.Models
     [Table("SystemConfigs")]
     public class SystemConfig
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]     
         public int ID { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [MaxLength(50)]
+        [Column(TypeName ="varchar")]
         public string Code { set; get; }
 
-        [StringLength(250)]
+        [MaxLength(50)]
         public string ValueString { set; get; }
 
         public int? ValueInt { set; get; }

@@ -12,14 +12,10 @@ namespace Shop.Model.Models
     public class OrderDetail
     {
         [Key]
-        [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int OrderID { set; get; }
         [Key]
-        [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ProductID { set; get; }
-        [Required]
+
         public int Quantity { set; get; }
 
         [ForeignKey("OrderID")]
